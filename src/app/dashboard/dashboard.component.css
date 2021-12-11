@@ -1,0 +1,12 @@
+.container-fluid{
+    background-color: rgb(236, 139, 103);
+}
+.userlogout{
+    font-weight: 200;
+    font-size: 2em;
+    color:black;
+    text-align: center;
+}
+.btn .btn-outline-dark{
+    margin-right: 16px;
+}

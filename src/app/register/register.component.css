@@ -1,0 +1,28 @@
+.register{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: black 1px solid;
+    padding: 15px;
+    width: 500px;
+    min-height: 500px;
+    background-color: rgb(220, 222, 235);
+    margin-top: 0;
+}
+
+.heading{
+    height: 65px;
+    background-color: rgb(220, 222, 235);
+    text-align: center;
+    border-bottom: 1px solid black;
+    
+}
+.image {
+    background-image:url("src/assets/login-bg.png");
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }

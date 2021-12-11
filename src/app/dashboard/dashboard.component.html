@@ -1,0 +1,38 @@
+<!-- <h1>Forms</h1>
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-link"><a class="form" href="#">Dashboard</a></button>
+    <button type="button" class="btn btn-link"><a routerLink="/login">Login</a></button>
+    <button type="button" class="btn btn-link"><a routerLink="/register">Register</a></button>
+
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Enate</a>
+      <div *ngIf="!UserLoggedIn; else logout">
+      <button type="button" class="btn btn-outline-dark btn-sm"><a routerLink="/register">Register</a></button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-outline-dark btn-sm"><a routerLink="/login">Sign In</a></button>
+    </div>
+  </div>
+  </nav>
+
+  <ng-template #logout>
+   <button class="btn-link" (click)="Logout()">Logout</button>
+  </ng-template>
+
+<div class="userlogout" *ngIf="UserLoggedIn">
+  <p>Welcome {{UserLoggedIn.FirstName}}!!!</p>
+</div>
+
+
+
+
+
+
+<!--Welcome UserLoggedIn
+Regitser
+Logout
+
+First login banner with register and 
+logout buttons with banner and nav tab-->
