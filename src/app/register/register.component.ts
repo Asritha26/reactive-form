@@ -71,5 +71,7 @@ export class RegisterComponent implements OnInit {
       }
     })
   }
-
+RouteToDashboard(){
+  this.route.navigate(['/dashboard']);
+}
 }

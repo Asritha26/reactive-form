@@ -21,9 +21,14 @@ export class DashboardComponent implements OnInit {
       this.route.navigate(['/dashboard'])
     
     }
-
+  
   }
-
+  RouteToLogin(){
+    this.route.navigate(['/login']);
+  }
+  RouteToRegister(){
+    this.route.navigate(['/register']);
+  }
   ngOnInit(): void {
   }
 

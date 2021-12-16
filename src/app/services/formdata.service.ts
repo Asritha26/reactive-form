@@ -30,6 +30,11 @@ export class FormdataService {
   GetUser(email){
      return this.Users.find(u => u.Email===email)
   }
+  CheckPassword(email, password){
+    console.log(email, password);
+    const user = this.GetUser(email);
+    return user.Password === password;
+  }
   UpdateLoggedInUser(user) {
     this.UserLoggedIn = user;
     sessionStorage.setItem('UserLoggedIn', JSON.stringify(this.UserLoggedIn));

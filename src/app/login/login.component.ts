@@ -34,14 +34,19 @@ export class LoginComponent implements OnInit {
         return;
       }
 
-
-      if (this.formSrv.IsUserPresent(this.LoginForm.controls.Email.value)) {
+      else if (this.formSrv.IsUserPresent(this.LoginForm.controls.Email.value)) {
+        if(this.formSrv.CheckPassword(this.LoginForm.controls.Email.value, this.LoginForm.controls.Password.value)){
           this.formSrv.UpdateLoggedInUser(this.formSrv.GetUser(this.LoginForm.controls.Email.value));
           console.log("Logged In");
           this.formSrv.UserLogin(this.LoginForm.value);
           this.formSrv.displayLog();
-          this.route.navigate(['/dashboard'])
+          this.route.navigate(['/dashboard']);
           //this.ShowRegister=false;
+        }
+        else{
+          console.log("Password Incorrect");
+        }  
+        
       }
       else {
         console.log("Not present. Please register");

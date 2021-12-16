@@ -11,8 +11,8 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Enate</a>
       <div *ngIf="!UserLoggedIn; else logout">
-      <button type="button" class="btn btn-outline-dark btn-sm"><a routerLink="/register">Register</a></button>&nbsp;&nbsp;
-      <button type="button" class="btn btn-outline-dark btn-sm"><a routerLink="/login">Sign In</a></button>
+      <button type="button" class="btn btn-secondary btn-sm" (click)="RouteToRegister()">Register</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-secondary btn-sm" (click)="RouteToLogin()">Sign In</button>
     </div>
   </div>
   </nav>
